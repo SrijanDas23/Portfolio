@@ -24,10 +24,10 @@ export default {
         montserrat: ["Montserrat", "sans-serif"],
       },
       content: {
-        evolvetext: "url('./assets/EvolveText.png')",
         abstractwaves: "url('./assets/AbstractWaves.png')",
         sparkles: "url('./assets/Sparkles.png')",
         circles: "url('./assets/Circles.png')",
+        arrow: "url('./assets/Arrow.png')",
       },
     },
     screens: {
@@ -36,21 +36,5 @@ export default {
       md: "1060px",
     },
   },
-  plugins: [
-    function ({ addUtilities, theme, variants }) {
-      const keyframes = {
-        marquee: {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(-100%)" },
-        },
-      };
-
-      addUtilities(
-        {
-          "@keyframes marquee": keyframes.marquee,
-        },
-        variants("keyframes")
-      );
-    },
-  ],
+  plugins: [],
 };
