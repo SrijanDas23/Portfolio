@@ -4,3 +4,10 @@ export enum SelectedPage {
   Projects = "projects",
   Contact = "contact",
 }
+
+export interface ClassType {
+  name: string;
+  description: string;
+  image: string;
+  skills: string[];
+}
