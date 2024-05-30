@@ -29,9 +29,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   ];
 
   return (
-    <nav
-      className={`${flexBetween} fixed top-0 w-full py-6 z-50`}
-    >
+    <nav className={`${flexBetween} fixed top-0 w-full py-6 z-50`}>
       <div className={`${flexBetween} mx-auto w-5/6`}>
         <div className={`${flexBetween} w-full gap-16`}>
           {/* LEFT SIDE */}
@@ -98,6 +96,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                   page={link.page}
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
+                  onClick={() => setIsMenuToggled(false)} // Close the menu when a link is clicked
                 />
               </motion.div>
             ))}
