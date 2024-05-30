@@ -8,6 +8,7 @@ import {
   midVariants,
   topVariants,
 } from "../../utils/framer-variants";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 type Props = {
   // isTopOfPage: boolean;
@@ -27,13 +28,23 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
     { page: "Projects", key: "projects" },
     { page: "Contact", key: "contact" },
   ];
+  const header = "Home";
+  const headerPage = header.toLowerCase().replace(/ /g, "") as SelectedPage;
 
   return (
     <nav className={`${flexBetween} fixed top-0 w-full py-6 z-50`}>
       <div className={`${flexBetween} mx-auto w-5/6`}>
         <div className={`${flexBetween} w-full gap-16`}>
           {/* LEFT SIDE */}
-          <h1 className="font-bold text-2xl">SrijanDas</h1>
+          <AnchorLink
+            className="text-2xl font-bold"
+            href="#home"
+            onClick={() => {
+              setSelectedPage(headerPage);
+            }}
+          >
+            SrijanDas
+          </AnchorLink>
 
           {/* RIGHT SIDE */}
           <div className="hidden md:flex md:items-center md:justify-between w-full">
@@ -48,7 +59,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
               ))}
             </div>
             <div className={`${flexBetween} gap-8`}>
-              <a href="/SrijanDas_resume.pdf" download="SrijanDas_resumee.pdf">
+              <a href="./SrijanDas_resume.pdf" download="SrijanDas_resumee.pdf">
                 <button className="rounded-md bg-secondary-500 px-10 py-2 hover:bg-primary-500 hover:text-white">
                   Download CV
                 </button>
