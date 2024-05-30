@@ -48,10 +48,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
               ))}
             </div>
             <div className={`${flexBetween} gap-8`}>
-              <a
-                href="../../assets/SrijanDas_resume.pdf"
-                download="SrijanDas_resume.pdf"
-              >
+              <a href="/SrijanDas_resume.pdf" download="SrijanDas_resumee.pdf">
                 <button className="rounded-md bg-secondary-500 px-10 py-2 hover:bg-primary-500 hover:text-white">
                   Download CV
                 </button>
