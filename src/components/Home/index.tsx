@@ -14,7 +14,7 @@ function Home({ setSelectedPage }: Props) {
   return (
     <section
       id="home"
-      className="gap-16 bg-primary-100 py-32 md:h-full md:pb-0 mb-16"
+      className="gap-16 bg-primary-100 py-10 md:h-full md:pb-0 mb-10"
     >
       {/* image and main header */}
       <motion.div

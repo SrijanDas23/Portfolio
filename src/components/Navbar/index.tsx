@@ -10,16 +10,16 @@ import {
 } from "../../utils/framer-variants";
 
 type Props = {
-  isTopOfPage: boolean;
+  // isTopOfPage: boolean;
   selectedPage: SelectedPage;
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
+const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
   const flexBetween = "flex items-center justify-between";
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
 
-  const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
+  // const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
 
   const links = [
     { page: "Home", key: "home" },
