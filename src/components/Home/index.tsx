@@ -38,8 +38,7 @@ function Home({ setSelectedPage }: Props) {
             }}
           >
             <HText>
-              Hi, I&apos;m{" "}
-              <GradientText text="Srijan"/>{" "}
+              Hi, I&apos;m <GradientText text="Srijan" />{" "}
               <span className="inline-block animate-waving-hand">👋</span>
             </HText>
             <p className="mt-8 text-lg">

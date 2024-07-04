@@ -4,8 +4,8 @@ import image1 from "../../assets/image1.png";
 import image2 from "../../assets/image2.jpg";
 import { motion } from "framer-motion";
 import HText from "../../utils/HText";
-import Project from "./Project"; // Assuming Project component is defined correctly
-import "./styles.css"; // Import your CSS file
+import Project from "./Project";
+import "./styles.css";
 import GradientText from "../../utils/GradientText";
 
 type Props = {
