@@ -16,6 +16,9 @@ export default {
         "secondary-500": "#FFC132",
         "per-grey": "#e5e7eb",
       },
+      boxShadow: {
+        pink: "5px 10px 15px rgba(255, 102, 153, 0.5)", // Define a pink shadow
+      },
       backgroundImage: (theme) => ({
         "gradient-yellowred":
           "linear-gradient(90deg, #000000 0%, #000000 100%)",
@@ -60,6 +63,8 @@ export default {
       xs: "480px",
       sm: "768px",
       md: "1060px",
+      lg: "1400px",
+      xl: "1480px",
     },
   },
   plugins: [

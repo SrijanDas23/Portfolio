@@ -8,12 +8,20 @@ type Props = {
   skills: string[];
 };
 
-const childVariant = {
-  hidden: { opacity: 0, scale: 0.9 },
-  visible: { opacity: 1, scale: 1 },
+const skillVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 230,
+      damping: 12,
+    },
+  },
 };
 
-const skillVariants = {
+const childVariant = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
@@ -29,10 +37,11 @@ const skillVariants = {
 const Project = ({ name, description, image, reverse, skills }: Props) => {
   return (
     <motion.li
-      className={`flex flex-col md:flex-row items-center bg-primary-200 p-10 rounded-lg shadow-lg w-[85%] mx-auto mb-16 gap-2 ${
+      className={`flex flex-col md:flex-row items-center bg-primary-200 p-10 rounded-lg shadow-pink w-[85%] mx-auto mb-16 gap-2 ${
         reverse ? "md:flex-row-reverse" : ""
       }`}
       variants={childVariant}
+      viewport={{ once: true, amount: 1 }}
     >
       <motion.div whileHover={{ scale: 1.05 }} className="w-full md:w-1/2">
         <img
@@ -52,6 +61,7 @@ const Project = ({ name, description, image, reverse, skills }: Props) => {
             hidden: {},
             visible: { transition: { staggerChildren: 0.1 } },
           }}
+          viewport={{ once: false, amount: 1 }}
         >
           {skills.map((skill, index) => (
             <motion.span

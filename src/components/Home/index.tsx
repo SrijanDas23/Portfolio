@@ -81,15 +81,25 @@ function Home({ setSelectedPage }: Props) {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.40, duration: 0.75 }}
+            transition={{ delay: 0.4, duration: 0.75 }}
             variants={{
               hidden: { opacity: 0, x: -90 },
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <ActionButton setSelectedPage={setSelectedPage}>
-              Hire Me!
-            </ActionButton>
+            <div className="md:flex hidden">
+              <ActionButton setSelectedPage={setSelectedPage}>
+                Hire Me!
+              </ActionButton>
+            </div>
+
+            <div className="flex items-center justify-between md:hidden">
+              <a href="./SrijanDas_resume.pdf" download="SrijanDas_resumee.pdf">
+                <button className="rounded-md bg-secondary-500 px-10 py-2 hover:bg-primary-500 hover:text-white">
+                  Download CV
+                </button>
+              </a>
+            </div>
             <AnchorLink
               className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
               onClick={() => setSelectedPage(SelectedPage.About)}
