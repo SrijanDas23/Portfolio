@@ -66,7 +66,7 @@ const Project = ({ name, description, image, reverse, skills }: Props) => {
           {skills.map((skill, index) => (
             <motion.span
               key={index}
-              className="px-3 py-1 bg-primary-300 text-black rounded-full md:text-lg"
+              className="px-3 py-1 bg-primary-300 text-black rounded-full md:text-lg shadow-pinksm"
               variants={skillVariants}
               whileHover={{ scale: 1.07 }}
             >

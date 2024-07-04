@@ -17,11 +17,12 @@ export default {
         "primary-900": "#9F3835",
         "secondary-400": "#FFCD5B",
         "secondary-500": "#FFC132",
-        "secondary-600":"#5E0000",
+        "secondary-600": "#5E0000",
         "per-grey": "#e5e7eb",
       },
       boxShadow: {
         pink: "5px 10px 15px rgba(255, 102, 153, 0.5)",
+        pinksm: "2px 4px 15px rgba(255, 102, 153, 0.5)",
       },
       dropShadow: {
         black: "10px 10px 20px rgb(82, 81, 81)",
