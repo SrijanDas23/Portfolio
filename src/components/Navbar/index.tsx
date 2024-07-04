@@ -9,6 +9,7 @@ import {
   topVariants,
 } from "../../utils/framer-variants";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import DownloadButton from "../../utils/DownloadButton";
 
 type Props = {
   // isTopOfPage: boolean;
@@ -62,11 +63,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
               ))}
             </div>
             <div className={`${flexBetween} gap-8`}>
-              <a href="./SrijanDas_resume.pdf" download="SrijanDas_resumee.pdf">
-                <button className="rounded-md bg-secondary-500 px-10 py-2 hover:bg-primary-500 hover:text-white">
-                  Download CV
-                </button>
-              </a>
+              <DownloadButton />
             </div>
           </div>
 

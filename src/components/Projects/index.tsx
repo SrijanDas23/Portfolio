@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import HText from "../../utils/HText";
 import Project from "./Project"; // Assuming Project component is defined correctly
 import "./styles.css"; // Import your CSS file
+import GradientText from "../../utils/GradientText";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -113,8 +114,7 @@ const Projects = ({ setSelectedPage }: Props) => {
         >
           <div className="md:w-3/5">
             <HText>
-              Lets take a look at{" "}
-              <span className="text-primary-500">My Projects</span>
+              Lets take a look at <GradientText text="My Projects" />
             </HText>
           </div>
         </motion.div>
@@ -132,7 +132,9 @@ const Projects = ({ setSelectedPage }: Props) => {
                 variants={itemVariants}
                 key={index}
                 className={`relative mx-[10px] shadow-pink overflow-hidden bg-cover rounded-2xl cursor-pointer transition-all duration-[0.8s] cubic-bezier-[.28,-0.03,0,.99] ${
-                  selectedCard === index ? "md:w-[700px] lg:w-[900px] xl:w-[1200px]" : "md:w-[70px] lg:w-[90px]"
+                  selectedCard === index
+                    ? "md:w-[700px] lg:w-[900px] xl:w-[1200px]"
+                    : "md:w-[70px] lg:w-[90px]"
                 }`}
                 style={{
                   backgroundImage: `url(${project.image})`,

@@ -5,6 +5,8 @@ import { SelectedPage } from "../../utils/types";
 import { motion } from "framer-motion";
 import { MdLocationOn } from "react-icons/md";
 import HText from "../../utils/HText";
+import DownloadButton from "../../utils/DownloadButton";
+import GradientText from "../../utils/GradientText";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -36,7 +38,8 @@ function Home({ setSelectedPage }: Props) {
             }}
           >
             <HText>
-              Hi, I&apos;m Srijan{" "}
+              Hi, I&apos;m{" "}
+              <GradientText text="Srijan"/>{" "}
               <span className="inline-block animate-waving-hand">👋</span>
             </HText>
             <p className="mt-8 text-lg">
@@ -94,11 +97,7 @@ function Home({ setSelectedPage }: Props) {
             </div>
 
             <div className="flex items-center justify-between md:hidden">
-              <a href="./SrijanDas_resume.pdf" download="SrijanDas_resumee.pdf">
-                <button className="rounded-md bg-secondary-500 px-10 py-2 hover:bg-primary-500 hover:text-white">
-                  Download CV
-                </button>
-              </a>
+              <DownloadButton />
             </div>
             <AnchorLink
               className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"

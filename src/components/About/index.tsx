@@ -2,6 +2,7 @@ import AboutPageGraphic from "../../assets/AboutPageGraphic.jpg";
 import { SelectedPage } from "../../utils/types";
 import { motion } from "framer-motion";
 import HText from "../../utils/HText";
+import GradientText from "../../utils/GradientText";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -24,7 +25,7 @@ function About({ setSelectedPage }: Props) {
           className="md:my-5 md:w-3/5"
         >
           <HText>
-            Let's learn more <span className="text-primary-500">about</span> me!
+            Let's learn more <GradientText text="about"/> me!
           </HText>
         </motion.div>
 

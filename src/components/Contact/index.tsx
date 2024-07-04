@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import ContactUsPageGraphic from "../../assets/ContactPageGraphic.png";
 import HText from "../../utils/HText";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import GradientText from "../../utils/GradientText";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -11,7 +12,7 @@ type Props = {
 
 const Contact = ({ setSelectedPage }: Props) => {
   const inputStyles = `mb-5 w-full rounded-lg bg-primary-300
-  px-5 py-3 placeholder-white`;
+  px-5 py-3 placeholder-white shadow-pink`;
 
   const {
     register,
@@ -66,7 +67,7 @@ const Contact = ({ setSelectedPage }: Props) => {
           }}
         >
           <HText>
-            <span className="text-primary-500">SEND</span> Me An Email!
+            <GradientText text="SEND Me" /> An Email!
           </HText>
         </motion.div>
 
@@ -144,7 +145,7 @@ const Contact = ({ setSelectedPage }: Props) => {
 
               <button
                 type="submit"
-                className="mt-5 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
+                className="mt-5 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:shadow-pink hover:text-white hover:bg-primary-500"
               >
                 SUBMIT
               </button>
@@ -203,7 +204,7 @@ const Contact = ({ setSelectedPage }: Props) => {
           >
             <div className="w-full">
               <img
-                className="w-full"
+                className="w-full drop-shadow-black"
                 alt="contact-us-page-graphic"
                 src={ContactUsPageGraphic}
               />

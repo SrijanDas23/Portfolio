@@ -12,18 +12,24 @@ export default {
         "primary-200": "#FFCCC9",
         "primary-300": "#FFA6A3",
         "primary-500": "#FF6B66",
+        "primary-400": "#FF8985",
+        "primary-600": "#E85D58",
+        "primary-900": "#9F3835",
         "secondary-400": "#FFCD5B",
         "secondary-500": "#FFC132",
+        "secondary-600":"#5E0000",
         "per-grey": "#e5e7eb",
       },
       boxShadow: {
-        pink: "5px 10px 15px rgba(255, 102, 153, 0.5)", // Define a pink shadow
+        pink: "5px 10px 15px rgba(255, 102, 153, 0.5)",
       },
-      backgroundImage: (theme) => ({
-        "gradient-yellowred":
-          "linear-gradient(90deg, #000000 0%, #000000 100%)",
-        "mobile-home": "url('./assets/HomePageGraphic.png')",
-      }),
+      dropShadow: {
+        black: "10px 10px 20px rgb(82, 81, 81)",
+        pink: "5px 10px 15px rgb(255, 102, 153)",
+      },
+      textShadow: {
+        custom: "10px 10px 20px rgb(82, 81, 81)",
+      },
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
@@ -31,8 +37,6 @@ export default {
       content: {
         abstractwaves: "url('./assets/AbstractWaves.png')",
         sparkles: "url('./assets/Sparkles.png')",
-        circles: "url('./assets/Circles.png')",
-        arrow: "url('./assets/Arrow.png')",
       },
       keyframes: {
         waving: {
@@ -67,11 +71,5 @@ export default {
       xl: "1480px",
     },
   },
-  plugins: [
-    function ({ addBase, theme }) {
-      addBase({
-        body: { backgroundColor: theme("colors.lightPink") },
-      });
-    },
-  ],
+  plugins: [],
 };
