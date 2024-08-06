@@ -10,4 +10,5 @@ export interface ClassType {
   description: string;
   image: string;
   skills: string[];
+  link?: string;
 }

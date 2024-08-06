@@ -1,30 +1,56 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio site to showcase my fullstack web dev projects.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contact](#contact)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
+Follow these steps to install and set up the Portfolio project.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+# Clone the repository
+git clone https://github.com/SrijanDas23/Portfolio
+
+# Change directory to the project folder
+cd Portfolio
+
+# Install dependencies
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Usage
+
+A guide on how to use the RealEstate application.
+
+```bash
+# Start the server with nodemon for development
+npm run dev
+
+# Build the project
+npm run build
+```
+
+## Features
+
+The Portfolio website includes the following features:
+
+- Detailed project pages with descriptions, technologies used, and live demo links
+- Optimized for viewing on all devices, including desktops, tablets, and smartphones
+- Smooth navigation and interactive elements for an engaging user experience
+- Visitors can easily get in touch via a built-in contact form
+- Links to repositories for easy access to the source code of showcased projects
+
+## Contact
+
+Email: [srijan.dastiku@gmail.com](mailto:srijan.dastiku@gmail.com)
+
+Github: [SrijanDas23](https://github.com/SrijanDas23)
+
+Hosted Website: [Portfolio](https://srijandas-portfolio.netlify.app/)
