@@ -24,3 +24,10 @@ body,
 ::-webkit-scrollbar-thumb{
   background-color: #FFA6A3;
 }
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #FF6B66 inset !important;
+  -webkit-text-fill-color: white !important;
+  border-radius: 8px;
+}

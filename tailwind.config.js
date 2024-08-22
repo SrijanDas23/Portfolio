@@ -21,8 +21,9 @@ export default {
         "per-grey": "#e5e7eb",
       },
       boxShadow: {
-        pink: "5px 10px 15px rgba(255, 102, 153, 0.5)",
+        pink: "5px 5px 10px rgba(255, 102, 153, 0.7)",
         pinksm: "2px 4px 15px rgba(255, 102, 153, 0.5)",
+        pinkdark: "4px 8px 10px rgba(255, 137, 133, 0.5)",
       },
       dropShadow: {
         black: "10px 10px 20px rgb(82, 81, 81)",
@@ -34,6 +35,9 @@ export default {
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+      },
+      translate: {
+        "up-hover": "-0.25rem",
       },
       content: {
         abstractwaves: "url('./assets/AbstractWaves.png')",
@@ -72,5 +76,17 @@ export default {
       xl: "1480px",
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".hover-up": {
+          transition: "transform 0.2s ease-in-out",
+          "&:hover": {
+            transform: "translateY(-0.25rem)",
+          },
+        },
+      };
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+  ],
 };

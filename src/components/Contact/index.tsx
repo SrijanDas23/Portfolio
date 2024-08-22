@@ -11,8 +11,8 @@ type Props = {
 };
 
 const Contact = ({ setSelectedPage }: Props) => {
-  const inputStyles = `mb-5 w-full rounded-lg bg-primary-300
-  px-5 py-3 placeholder-white shadow-pink`;
+  const inputStyles = `mb-5 w-full rounded-lg bg-primary-300 outline-none
+  px-5 py-3 placeholder-white shadow-pinkdark`;
 
   const {
     register,
@@ -145,7 +145,7 @@ const Contact = ({ setSelectedPage }: Props) => {
 
               <button
                 type="submit"
-                className="mt-5 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:shadow-pink hover:text-white hover:bg-primary-500"
+                className="mt-5 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:shadow-pink hover:text-white hover:bg-primary-500 hover-up"
               >
                 SUBMIT
               </button>
