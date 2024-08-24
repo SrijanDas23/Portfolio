@@ -12,3 +12,14 @@
 .project-info.hidden {
   opacity: 0;
 }
+
+.card {
+  width: 70px;
+  transition: width 0.5s ease;
+}
+
+@media (min-width: 1080px) {
+  .card {
+    width: 55rem;
+  }
+}
