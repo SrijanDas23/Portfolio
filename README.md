@@ -1,6 +1,6 @@
 # Portfolio
 
-A personal portfolio site to showcase my fullstack web dev projects.
+A personal portfolio site to showcase my web dev projects.
 
 
 ## Table of Contents
