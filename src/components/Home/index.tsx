@@ -49,6 +49,14 @@ function Home({ setSelectedPage }: Props) {
 							exceptional digital experiences that are fast,
 							accessible, visually appealing, and responsive.
 						</p>
+						<p className="mt-2 text-lg">
+							I am currently working as an
+							<span className="font-bold"> Intern SDE </span>
+							at
+							<span className="font-bold">
+								Trustt (formerly Novopay).
+							</span>
+						</p>
 					</motion.div>
 
 					<motion.div
@@ -68,7 +76,7 @@ function Home({ setSelectedPage }: Props) {
 									size={22}
 									className="animate-jumping-icon"
 								/>
-								<p>Kolkata, India</p>
+								<p>Bangalore, India</p>
 							</div>
 
 							<div className="flex items-center gap-2">
@@ -104,7 +112,7 @@ function Home({ setSelectedPage }: Props) {
 							<DownloadButton />
 						</div>
 						<AnchorLink
-							className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
+							className="text-sm font-bold text-primary-500 underline hover:text-secondary-500 hover-up"
 							onClick={() => setSelectedPage(SelectedPage.About)}
 							href={`#${SelectedPage.About}`}
 						>
