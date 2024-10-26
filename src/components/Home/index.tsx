@@ -16,7 +16,7 @@ function Home({ setSelectedPage }: Props) {
 	return (
 		<section
 			id="home"
-			className="gap-16 bg-primary-100 py-10 md:h-full md:pb-0 mb-10"
+			className="gap-16 bg-primary-100 py-16 md:h-full md:pb-0 mb-10"
 		>
 			{/* image and main header */}
 			<motion.div
@@ -44,10 +44,14 @@ function Home({ setSelectedPage }: Props) {
 							</span>
 						</HText>
 						<p className="mt-8 text-lg">
-							I'm a full stack developer (React.js & Node.js) with
-							a focus on creating (and occasionally designing)
-							exceptional digital experiences that are fast,
-							accessible, visually appealing, and responsive.
+							I'm a{" "}
+							<span className="font-bold">
+								full stack developer (MERN stack)
+							</span>{" "}
+							with a focus on creating (and occasionally
+							designing) exceptional digital experiences that are
+							fast, accessible, visually appealing, and
+							responsive.
 						</p>
 						<p className="mt-2 text-lg">
 							I am currently working as an
