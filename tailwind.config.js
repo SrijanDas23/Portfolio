@@ -63,10 +63,15 @@ export default {
 					"90%": { transform: "translateX(1.2px)" },
 					"95%": { transform: "translateX(-1.2px)" },
 				},
+				slide: {
+					"0%": { transform: "translateX(0)" },
+					"100%": { transform: "translateX(-100%)" },
+				},
 			},
 			animation: {
 				"waving-hand": "waving 2s linear infinite",
 				"jumping-icon": "jumping 1.3s infinite",
+				"slide": "slide 400s linear infinite",
 			},
 		},
 		screens: {
@@ -85,6 +90,9 @@ export default {
 					"&:hover": {
 						transform: "translateY(-0.25rem)",
 					},
+				},
+				".pause-animation": {
+					animationPlayState: "paused",
 				},
 			};
 			addUtilities(newUtilities, ["responsive", "hover"]);

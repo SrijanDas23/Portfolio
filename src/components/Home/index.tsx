@@ -7,6 +7,7 @@ import { MdLocationOn } from "react-icons/md";
 import HText from "../../utils/HText";
 import DownloadButton from "../../utils/DownloadButton";
 import GradientText from "../../utils/GradientText";
+import LogoCarousel from "./LogoCarousel";
 
 type Props = {
 	setSelectedPage: (value: SelectedPage) => void;
@@ -80,7 +81,7 @@ function Home({ setSelectedPage }: Props) {
 									size={22}
 									className="animate-jumping-icon"
 								/>
-								<p>Bangalore, India</p>
+								<p>Bengaluru, India</p>
 							</div>
 
 							<div className="flex items-center gap-2">
@@ -150,6 +151,7 @@ function Home({ setSelectedPage }: Props) {
 					</div>
 				</motion.div>
 			</motion.div>
+			<LogoCarousel />
 		</section>
 	);
 }
