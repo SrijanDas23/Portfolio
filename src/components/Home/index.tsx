@@ -4,7 +4,6 @@ import ActionButton from "../../utils/ActionButton";
 import { SelectedPage } from "../../utils/types";
 import { motion } from "framer-motion";
 import { MdLocationOn } from "react-icons/md";
-import HText from "../../utils/HText";
 import DownloadButton from "../../utils/DownloadButton";
 import GradientText from "../../utils/GradientText";
 import LogoCarousel from "./LogoCarousel";
@@ -38,12 +37,12 @@ function Home({ setSelectedPage }: Props) {
 							visible: { opacity: 1, x: 0 },
 						}}
 					>
-						<HText>
-							Hi, I&apos;m <GradientText text="Srijan" />{" "}
+						<h1 className="basis-3/5 font-montserrat text-3xl font-bold">
+							Hi, I&apos;m <GradientText text="Srijan Das" />{" "}
 							<span className="inline-block animate-waving-hand">
 								👋
 							</span>
-						</HText>
+						</h1>
 						<p className="mt-8 text-lg">
 							I'm a{" "}
 							<span className="font-bold">

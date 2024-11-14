@@ -75,7 +75,7 @@ const Project = ({
 				/>
 			</motion.div>
 			<div className="w-full md:w-1/2 md:pl-10 mt-6 md:mt-0">
-				<h2 className="text-3xl font-bold">{name}</h2>
+				<h3 className="text-3xl font-bold">{name}</h3>
 				<p className="text-lg mt-5">{description}</p>
 				<motion.div
 					className="flex flex-wrap gap-2 mt-10"

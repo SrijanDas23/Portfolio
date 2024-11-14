@@ -212,6 +212,8 @@ const Contact = ({ setSelectedPage }: Props) => {
 					>
 						<div className="w-full">
 							<img
+								width="auto"
+								height="auto"
 								className="w-full drop-shadow-black"
 								alt="contact-me-page-graphic"
 								src={ContactUsPageGraphic}
