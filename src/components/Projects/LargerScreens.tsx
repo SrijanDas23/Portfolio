@@ -88,6 +88,7 @@ const LargerScreens = ({ projects }: Props) => {
 								<motion.a
 									href={project.link}
 									target="_blank"
+									aria-label="my project link"
 									rel="noopener noreferrer"
 									className="absolute top-4 right-4 text-2xl z-10"
 									whileHover={{ scale: 1.1 }}
@@ -103,12 +104,13 @@ const LargerScreens = ({ projects }: Props) => {
 									src={project.image}
 									alt={`${project.name} project`}
 									className="rounded-lg w-full h-[350px]"
+									loading="lazy"
 								/>
 							</motion.div>
 							<div className="w-full md:w-1/2 md:pl-10 mt-6 md:mt-0">
-								<h3 className="text-3xl font-bold">
+								<h2 className="text-3xl font-bold">
 									{project.name}
-								</h3>
+								</h2>
 								<p className="text-lg mt-5">
 									{project.description}
 								</p>

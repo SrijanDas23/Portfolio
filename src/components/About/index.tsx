@@ -50,7 +50,8 @@ function About({ setSelectedPage }: Props) {
 								<div className="relative h-[380px] w-[320px] md:h-[460px] md:w-[380px] lg:h-[520px] lg:w-[440px]">
 									<img
 										src={AboutPageGraphic}
-										alt="Fullpose of Sagar"
+										alt="AboutPageGraphic"
+										loading="lazy"
 										className="absolute z-10 h-[360px] w-[280px] border-8 border-white max-md:left-5 md:right-0 md:top-0 md:h-[420px] md:w-[340px] lg:h-[480px] lg:w-[400px]"
 										style={{ objectFit: "cover" }}
 									/>

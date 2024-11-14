@@ -11,8 +11,7 @@ type Props = {
 };
 
 const Contact = ({ setSelectedPage }: Props) => {
-	const inputStyles = `mb-5 w-full rounded-lg bg-primary-300 outline-none
-  px-5 py-3 placeholder-white shadow-pinkdark`;
+	const inputStyles = `mb-5 w-full rounded-lg bg-primary-300 outline-none px-5 py-3 placeholder-white shadow-pinkdark`;
 
 	const {
 		register,
@@ -20,6 +19,7 @@ const Contact = ({ setSelectedPage }: Props) => {
 		formState: { errors },
 	} = useForm();
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const onSubmit = async (e: any) => {
 		const isValid = await trigger();
 		if (!isValid) {
@@ -171,6 +171,7 @@ const Contact = ({ setSelectedPage }: Props) => {
 									rel="noopener noreferrer"
 									variants={itemVariants}
 									whileHover={{ scale: 1.2 }}
+									aria-label="github-link"
 								>
 									<FaGithub style={{ fontSize: "28px" }} />
 								</motion.a>
@@ -180,6 +181,7 @@ const Contact = ({ setSelectedPage }: Props) => {
 									rel="noopener noreferrer"
 									variants={itemVariants}
 									whileHover={{ scale: 1.2 }}
+									aria-label="facebook-link"
 								>
 									<FaFacebook style={{ fontSize: "28px" }} />
 								</motion.a>
@@ -189,6 +191,7 @@ const Contact = ({ setSelectedPage }: Props) => {
 									rel="noopener noreferrer"
 									variants={itemVariants}
 									whileHover={{ scale: 1.2 }}
+									aria-label="linkedin-link"
 								>
 									<FaLinkedin style={{ fontSize: "28px" }} />
 								</motion.a>
@@ -210,8 +213,9 @@ const Contact = ({ setSelectedPage }: Props) => {
 						<div className="w-full">
 							<img
 								className="w-full drop-shadow-black"
-								alt="contact-us-page-graphic"
+								alt="contact-me-page-graphic"
 								src={ContactUsPageGraphic}
+								loading="lazy"
 							/>
 						</div>
 					</motion.div>

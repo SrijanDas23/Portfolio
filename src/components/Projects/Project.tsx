@@ -61,6 +61,7 @@ const Project = ({
 						href={link}
 						target="_blank"
 						rel="noopener noreferrer"
+						aria-label="my project link"
 						className="absolute top-4 right-4 text-2xl text-white z-10"
 					>
 						<FiExternalLink className="drop-shadow-black" />
@@ -70,10 +71,11 @@ const Project = ({
 					src={image}
 					alt={`${name} project`}
 					className="rounded-lg w-full"
+					loading="lazy"
 				/>
 			</motion.div>
 			<div className="w-full md:w-1/2 md:pl-10 mt-6 md:mt-0">
-				<h3 className="text-3xl font-bold">{name}</h3>
+				<h2 className="text-3xl font-bold">{name}</h2>
 				<p className="text-lg mt-5">{description}</p>
 				<motion.div
 					className="flex flex-wrap gap-2 mt-10"

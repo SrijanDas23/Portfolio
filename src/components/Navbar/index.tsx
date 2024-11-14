@@ -69,7 +69,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
 
           {/* MOBILE MENU BUTTON */}
           <div className="md:hidden flex items-center">
-            <button
+            <div
               className="w-10 h-8 flex flex-col justify-between z-50 relative"
               onClick={() => setIsMenuToggled(!isMenuToggled)}
             >
@@ -88,7 +88,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
                 animate={isMenuToggled ? "opened" : "closed"}
                 className="w-10 h-1 bg-gray-500 rounded origin-left"
               ></motion.div>
-            </button>
+            </div>
           </div>
         </div>
       </div>

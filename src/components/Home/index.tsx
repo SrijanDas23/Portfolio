@@ -143,6 +143,7 @@ function Home({ setSelectedPage }: Props) {
 							<img
 								src={HomePageGraphic}
 								alt="home-page-graphic"
+								loading="lazy"
 								className="absolute z-10 h-[280px] w-[240px] border-8 border-primary-100 max-md:left-5 md:left-0 md:top-0 md:h-[320px] md:w-[280px]"
 								style={{ objectFit: "cover" }}
 							/>
