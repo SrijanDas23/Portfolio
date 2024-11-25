@@ -68,10 +68,13 @@ const Project = ({
 					</a>
 				)}
 				<img
+					height="auto"
+					width="100%"
 					src={image}
 					alt={`${name} project`}
 					className="rounded-lg w-full"
 					loading="lazy"
+					title={`${name} project`}
 				/>
 			</motion.div>
 			<div className="w-full md:w-1/2 md:pl-10 mt-6 md:mt-0">

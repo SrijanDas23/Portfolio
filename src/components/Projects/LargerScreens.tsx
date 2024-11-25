@@ -101,10 +101,14 @@ const LargerScreens = ({ projects }: Props) => {
 								className="w-full md:w-1/2"
 							>
 								<img
+									height="300px"
+									width="100%"
 									src={project.image}
 									alt={`${project.name} project`}
+									title={`${project.name} project`}
 									className="rounded-lg w-full h-[300px]"
 									loading="lazy"
+									style={{width:"100%",height:"300px"}}
 								/>
 							</motion.div>
 							<div className="w-full md:w-1/2 md:pl-10 mt-6 md:mt-0">
@@ -147,9 +151,14 @@ const LargerScreens = ({ projects }: Props) => {
 						<div className="flex justify-center items-center h-full cursor-pointer">
 							<div className="relative w-full h-full rounded-lg overflow-hidden">
 								<img
+									height="100%"
+									width="100%"
 									className="w-full h-full object-cover opacity-80"
 									src={project.image}
 									alt={project.name}
+									loading="lazy"
+									title={project.name}
+									style={{width: '100%', height: "100%"}}
 								/>
 								<div className="absolute inset-0 bg-black/70"></div>
 							</div>

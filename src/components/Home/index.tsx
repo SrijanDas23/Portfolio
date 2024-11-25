@@ -140,9 +140,12 @@ function Home({ setSelectedPage }: Props) {
 					<div className="flex items-center justify-center md:order-last md:flex-grow md:justify-end">
 						<div className="relative h-[300px] w-[280px] md:h-[360px] md:w-[320px]">
 							<img
+								height="280px"
+								width="240px"
 								src={HomePageGraphic}
 								alt="home-page-graphic"
-								loading="lazy"
+								title="home-page-graphic"
+								loading="eager"
 								className="absolute z-10 h-[280px] w-[240px] border-8 border-primary-100 max-md:left-5 md:left-0 md:top-0 md:h-[320px] md:w-[280px]"
 								style={{ objectFit: "cover" }}
 							/>
