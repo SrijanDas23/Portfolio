@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ClassType } from "../../utils/types";
 import { FiExternalLink } from "react-icons/fi";
@@ -9,9 +9,13 @@ type Props = {
 
 const LargerScreens = ({ projects }: Props) => {
 	const [selectedCard, setSelectedCard] = useState<number>(0);
+	const [hasMounted, setHasMounted] = useState<boolean>(false);
+
+	useEffect(() => {
+		setHasMounted(true);
+	}, []);
 
 	const handleCardSelect = (index: number) => {
-		// Only change the selected card if it's not already selected
 		if (selectedCard !== index) {
 			setSelectedCard(index);
 		}
@@ -46,14 +50,14 @@ const LargerScreens = ({ projects }: Props) => {
 			width: "65vw",
 			transition: {
 				type: "tween",
-				duration: 0.5,
+				duration: 1,
 			},
 		},
 		collapsed: {
 			width: "70px",
 			transition: {
 				type: "tween",
-				duration: 0.5,
+				duration: 1,
 			},
 		},
 	};
@@ -69,19 +73,23 @@ const LargerScreens = ({ projects }: Props) => {
 			{projects.map((project, index) => (
 				<motion.div
 					key={index}
-					className="relative mx-[10px] shadow-pink overflow-hidden bg-cover rounded-2xl"
+					className="relative mx-[10px] shadow-pink overflow-hidden bg-cover rounded-2xl bg-primary-200"
 					onClick={() => handleCardSelect(index)}
-					animate={selectedCard === index ? "expanded" : "collapsed"}
+					animate={
+						hasMounted
+							? selectedCard === index
+								? "expanded"
+								: "collapsed"
+							: "collapsed"
+					}
 					variants={expandedCardVariants}
-					viewport={{ once: true, amount: 0.1 }}
 				>
 					{selectedCard === index ? (
 						<motion.li
-							className="flex flex-col md:flex-row items-center bg-primary-200 p-10 rounded-lg shadow-pink w-[100%] h-[100%] mx-auto mb-16 gap-2"
+							className="flex flex-col md:flex-row items-center p-10 rounded-lg w-[100%] h-[90%] mx-auto mb-16 gap-2"
 							initial="hidden"
 							animate="visible"
 							variants={itemVariants}
-							viewport={{ once: true, amount: 0.1 }}
 						>
 							{/* External Link Icon */}
 							{project.link && (
@@ -108,7 +116,11 @@ const LargerScreens = ({ projects }: Props) => {
 									title={`${project.name} project`}
 									className="rounded-lg w-full h-[300px]"
 									loading="lazy"
-									style={{width:"100%",height:"300px"}}
+									style={{
+										width: "100%",
+										height: "300px",
+										objectFit: "contain",
+									}}
 								/>
 							</motion.div>
 							<div className="w-full md:w-1/2 md:pl-10 mt-6 md:mt-0">
@@ -158,7 +170,7 @@ const LargerScreens = ({ projects }: Props) => {
 									alt={project.name}
 									loading="lazy"
 									title={project.name}
-									style={{width: '100%', height: "100%"}}
+									style={{ width: "100%", height: "100%" }}
 								/>
 								<div className="absolute inset-0 bg-black/70"></div>
 							</div>

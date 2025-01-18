@@ -53,10 +53,11 @@ function About({ setSelectedPage }: Props) {
 										width="320px"
 										src={AboutPageGraphic}
 										alt="AboutPageGraphic"
-										title="AboutPageGraphic"
 										loading="eager"
-										className="absolute z-10 border-8 border-white max-md:left-5 md:right-0 md:top-0 md:h-[420px] md:w-[340px] lg:h-[480px] lg:w-[400px]"
-										style={{ objectFit: "cover", height:"360px", width:"280px" }}
+										className="absolute z-10 border-8 border-white max-md:left-5 md:right-0 md:top-0 md:h-[420px] md:w-[340px] lg:h-[480px] lg:w-[400px] h-[360px] w-[280px]"
+										style={{
+											objectFit: "cover",
+										}}
 									/>
 									<div className="absolute h-[360px] w-[320px] border-8 border-transparent bg-primary-100 max-md:top-5 md:bottom-0 md:left-0 md:h-[420px] md:w-[340px] lg:h-[480px] lg:w-[400px]"></div>
 								</div>

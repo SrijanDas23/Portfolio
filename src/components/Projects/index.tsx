@@ -1,6 +1,7 @@
 import { ClassType, SelectedPage } from "../../utils/types";
 import image1 from "../../assets/image1.png";
-import image2 from "../../assets/image2.jpg";
+import image2 from "../../assets/image2.png";
+import image3 from "../../assets/image3.jpg";
 import { motion } from "framer-motion";
 import HText from "../../utils/HText";
 import Project from "./Project";
@@ -30,9 +31,22 @@ const projects: Array<ClassType> = [
 		link: "https://real-estate-2-fak2.onrender.com/",
 	},
 	{
+		name: "Chat App",
+		description: "Place to add and talk to your friends in realtime.",
+		image: image2,
+		skills: [
+			"ReactJS 18",
+			"Firebase",
+			"Firestore",
+			"Redux Toolkit",
+			"Vanilla CSS"
+		],
+		link: "https://chatt-app23.netlify.app/",
+	},
+	{
 		name: "Food Delivery Website",
 		description: "Place to order food online (future project)",
-		image: image2,
+		image: image3,
 		skills: [
 			"Shadcn/ui",
 			"ReactJS 18",
@@ -43,20 +57,6 @@ const projects: Array<ClassType> = [
 			"Java",
 		],
 		link: "https://github.com/SrijanDas23/Food-Delivery",
-	},
-	{
-		name: "E-commerce Website",
-		description: "Place to buy and sell stuff (future project)",
-		image: image2,
-		skills: [
-			"Chakra UI",
-			"ReactJS 18",
-			"MongoDB",
-			"Firebase",
-			"Redux Toolkit",
-			"JavaScript",
-			"Express.js",
-		],
 	},
 ];
 
@@ -93,7 +93,7 @@ const Projects = ({ setSelectedPage }: Props) => {
 				</motion.div>
 				<motion.div
 					className="flex items-center justify-center"
-					viewport={{ once: true, amount: 0.1 }}
+					viewport={{ amount: 0.1 }}
 					transition={{ duration: 1.5 }}
 					variants={{
 						hidden: { opacity: 0, x: -250 },

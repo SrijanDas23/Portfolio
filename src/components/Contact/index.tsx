@@ -216,7 +216,6 @@ const Contact = ({ setSelectedPage }: Props) => {
 								height="auto"
 								className="w-full drop-shadow-black"
 								alt="contact-me-page-graphic"
-								title="contact-me-page-graphic"
 								src={ContactUsPageGraphic}
 								loading="lazy"
 							/>
